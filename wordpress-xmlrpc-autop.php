@@ -8,7 +8,7 @@
 
 add_filter( 'xmlrpc_prepare_post', 'cpdm_xmlrpc_methods' );
 
-function cpdm_xmlrpc_methods( $post, $orig_post, $fields )
+function cpdm_xmlrpc_methods( $post, $orig_post = null , $fields = null )
 {
 	if (isset($post['post_content'])) {
 		$post['post_content'] = wpautop($post['post_content']);
